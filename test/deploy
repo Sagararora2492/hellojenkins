@@ -1,0 +1,8 @@
+#!/bin/sh     
+ssh root@10.0.3.68 <<EOF       
+ cd /root/hellojenkins/test 
+ git pull      
+ npm install --production      
+ pm2 restart all
+ exit      
+EOF
